@@ -35,7 +35,7 @@ module.exports = function(config) {
     port: 8080,
 	
 	
-	urlRoot: 'karma',
+	urlRoot: '/karma',
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
@@ -64,7 +64,9 @@ module.exports = function(config) {
 	 '**/*.html': ['html2js']
 	},
 	proxies:  {
-    '/': 'http://www.ozon.ru/'
+    '/': 'http://www.ozon.ru/',
+	'/context': 'http://www.ozon.ru/context',
+	'/context/cart': 'http://www.ozon.ru/context/cart'
   },
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,

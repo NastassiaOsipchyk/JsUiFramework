@@ -8,12 +8,16 @@ class OzonSceenUpPanel
 	productInBasketCss: ".js_in_cart"
 	
 	openOzonScreen: ->
-		F.open @urlCss
+		F.open "/context/cart"
+		console.log window.location.host
 	
 	goToBasket: ->
-		F(".bHeadBasket>a span").click()
-		F.wait 10000
+		console.log F(".bHeadBasket>a").attr "href"
+		F.wait 2000
+
 	
+		
+
 	typeTextToInput: (text)->(
 		console.log text
 		F(@searchInputCss).type(text)

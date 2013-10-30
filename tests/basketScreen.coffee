@@ -4,8 +4,12 @@ class BasketScreen
 	checkAllProductsCss: ".h2 .check input"
 	deleteProductsCss: ".deleteFromCart"
 
+	openBasket:->
+		F.open "/context/cart" 
+		
 	verifyBasketScreen: ->
-		return F(@myBasket).visible()
+		console.log F(".cartModule").attr("id")
+		console.log document.title
 		
 	getNumberOfProducts: ->
 		a = F(".cart-count").text()
